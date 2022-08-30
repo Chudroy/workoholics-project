@@ -186,9 +186,16 @@ $workoholics-pink: #fb088c;
   margin-bottom: 2rem;
 }
 
+.product a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .colour-samples {
   display: flex;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
 
 .sample-colour {
@@ -214,6 +221,8 @@ body {
   margin: 0;
   font-family: "DM Sans", sans-serif;
   font-size: 24px;
+  overflow-x: hidden;
+  position: relative;
 }
 
 main {
@@ -247,10 +256,55 @@ form label {
   font-size: 16px;
 }
 
+form #email {
+  width: 85%;
+  padding: 12px 20px;
+  display: inline-block;
+  border-right: 0px;
+  border-bottom: 1px solid #ccc;
+  background-color: $workoholics-black;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+form #terms-and-conditions-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+form input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+form .custom-checkbox {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border: 1px solid #eee;
+  background-color: $workoholics-black;
+  margin-right: 1rem;
+}
+
 form span {
   font-size: 14px;
 }
 
+form a {
+  color: white;
+}
+
 form button {
   font-size: 18px;
+  background-color: $workoholics-black; /* Green */
+  border: none;
+  color: white;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
