@@ -232,6 +232,10 @@ $page-padding-mobile: 0 1rem 0;
   margin-bottom: 3rem;
 }
 
+#terms-and-conditions-text {
+  margin-bottom: 1rem;
+}
+
 .nav-menu-item {
   margin: auto 1rem auto;
 }
@@ -308,6 +312,10 @@ $page-padding-mobile: 0 1rem 0;
   background-color: $workoholics-pink;
 }
 
+.flex-divider {
+  flex: 1;
+}
+
 nav {
   $interior-padding: 5vw;
   padding-top: 0.5rem;
@@ -360,9 +368,12 @@ form label {
 }
 
 form #email {
-  width: 85%;
-  padding: 12px 20px;
-  display: inline-block;
+  width: 100%;
+  box-sizing: border-box; /* add this */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-bottom: 20px;
+  display: block;
   border-right: 0px;
   border-bottom: 1px solid #ccc;
   background-color: $workoholics-black;
@@ -372,8 +383,8 @@ form #email {
 
 form #terms-and-conditions-container {
   display: flex;
-  align-items: flex-start;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
 form input[type="checkbox"] {
@@ -410,12 +421,21 @@ form button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  margin-left: 1rem;
 }
 
 @media only screen and (max-width: 900px) {
   #intro img {
     right: 0vw;
     left: 25vw;
+  }
+
+  .flex-divider {
+    flex-basis: 100%;
+  }
+
+  #terms-and-conditions-check {
+    margin-bottom: 1rem;
   }
 }
 
@@ -510,8 +530,16 @@ form button {
     display: block;
   }
 
+  footer form button {
+    display: block;
+  }
+
   footer address {
     padding-top: 3.5rem;
     padding-bottom: 2rem;
+  }
+
+  form button {
+    margin-left: 0;
   }
 }

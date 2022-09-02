@@ -94,22 +94,26 @@
         </div>
 
         <form action="#" method="POST">
-          <label for="email"> </label>
+          <label for="email"></label>
           <input type="email" id="email" name="email" placeholder="E-mail" />
 
           <div id="terms-and-conditions-container">
-            <label for="terms-and-conditions">
-              <input class="checkbox" type="checkbox" />
-              <div class="custom-checkbox"></div>
-            </label>
-            <span>
-              I have read and accepted the <a href="#">Terms and Conditions</a>
-            </span>
-          </div>
+            <div id="terms-and-conditions-check">
+              <label for="terms-and-conditions">
+                <input class="checkbox" type="checkbox" />
+                <div class="custom-checkbox"></div>
+              </label>
 
-          <button type="submit">
-            Submit <i class="fa-solid fa-arrow-right-to-bracket"></i>
-          </button>
+              <span id="terms-and-conditions-text">
+                I have read and accepted the
+                <a href="#">Terms and Conditions</a>
+              </span>
+            </div>
+            <span class="flex-divider"></span>
+            <button type="submit">
+              Submit <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+          </div>
         </form>
       </div>
 
