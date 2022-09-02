@@ -31,7 +31,7 @@
       </div>
 
       <div id="products">
-        <ul>
+        <ul id="products-intro">
           <li>
             Lorem ipsum dolor sit ame amet, consectetur adipiscing elit. Etiam
             <b>vulputate dui efficitur</b> ultrices pharetra. Praesent tempor
@@ -39,7 +39,7 @@
           </li>
         </ul>
 
-        <div class="product">
+        <div id="t-shirt" class="product">
           <img id="t-shirt-img" src="../assets/Tshirt1.png" alt="" />
           <h2><b>T-shirt</b></h2>
           <p>
@@ -53,10 +53,10 @@
           </div>
 
           <a href="#">Buy <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-          <div class="divider"></div>
+          <div class="divider product-divider"></div>
         </div>
 
-        <div class="product">
+        <div id="bottle" class="product">
           <img id="bottle-img" src="../assets/Bottle1.png" alt="" />
           <h2>Bottle</h2>
           <p>
@@ -68,37 +68,44 @@
           </div>
 
           <a href="#">Buy <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-          <div class="divider"></div>
+          <div class="divider product-divider"></div>
         </div>
       </div>
     </main>
 
     <footer>
-      <div id="slogan">
-        <h3>We love what we do.</h3>
-        <h3>We are Worköholics.</h3>
-      </div>
+      <address id="address-desktop-view">
+        <p>hello@workoholics.es</p>
+        <p>+34 944 059 957</p>
+      </address>
 
-      <form action="#" method="POST">
-        <label for="email"> </label>
-        <input type="email" id="email" name="email" placeholder="E-mail" />
-
-        <div id="terms-and-conditions-container">
-          <label for="terms-and-conditions">
-            <input class="checkbox" type="checkbox" />
-            <div class="custom-checkbox"></div>
-          </label>
-          <span>
-            I have read and accepted the <a href="#">Terms and Conditions</a>
-          </span>
+      <div id="footer-right-block">
+        <div id="slogan">
+          <h3>We love what we do.</h3>
+          <h3>We are Worköholics.</h3>
         </div>
 
-        <button type="submit">
-          Submit <i class="fa-solid fa-arrow-right-to-bracket"></i>
-        </button>
-      </form>
+        <form action="#" method="POST">
+          <label for="email"> </label>
+          <input type="email" id="email" name="email" placeholder="E-mail" />
 
-      <address>
+          <div id="terms-and-conditions-container">
+            <label for="terms-and-conditions">
+              <input class="checkbox" type="checkbox" />
+              <div class="custom-checkbox"></div>
+            </label>
+            <span>
+              I have read and accepted the <a href="#">Terms and Conditions</a>
+            </span>
+          </div>
+
+          <button type="submit">
+            Submit <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </button>
+        </form>
+      </div>
+
+      <address id="address-mobile-view">
         <p>hello@workoholics.es</p>
         <p>+34 944 059 957</p>
       </address>

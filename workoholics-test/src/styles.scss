@@ -157,13 +157,32 @@ $workoholics-pink: #fb088c;
   right: 12%;
 }
 
+#products {
+  display: flex;
+  flex-direction: column;
+}
+
+#products-intro {
+  max-width: 900px;
+  align-self: flex-end;
+  font-size: 32px;
+}
+
+#t-shirt {
+  align-self: flex-start;
+  max-width: 617px;
+}
+
+#bottle {
+  align-self: flex-end;
+  max-width: 617px;
+}
+
 #t-shirt-img {
   $rotation: 14deg;
   -webkit-transform: rotate($rotation) scaleX(-1);
   transform: rotate($rotation) scaleX(-1);
   z-index: -1;
-  left: 115px;
-  top: 875px;
 }
 
 #bottle-img {
@@ -171,8 +190,6 @@ $workoholics-pink: #fb088c;
   -webkit-transform: rotate($rotation) scaleX(-1);
   transform: rotate($rotation) scaleX(-1);
   z-index: -1;
-  left: 180px;
-  top: 1350px;
 }
 
 #slogan {
@@ -182,6 +199,25 @@ $workoholics-pink: #fb088c;
 
 #slogan h3 {
   margin: 0 auto 0;
+}
+
+#address-mobile-view {
+  display: none;
+}
+
+#address-desktop-view {
+  flex-grow: 1;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+#address-desktop-view p {
+  font-size: 25px;
+}
+
+#footer-right-block {
+  flex-grow: 1;
+  margin-bottom: 3rem;
 }
 
 .nav-menu-item {
@@ -203,19 +239,23 @@ $workoholics-pink: #fb088c;
   border-top: 2px solid $workoholics-black;
 }
 
+.product-divider {
+  width: 100%;
+}
+
 .product {
-  margin: 12rem auto 12rem;
+  margin: 3rem 0 3rem;
+}
+
+.product h2 {
+  font-size: 50px;
+  margin-bottom: 0rem;
 }
 
 .product img {
   position: absolute;
   width: auto;
   height: 365px;
-}
-
-.product h2 {
-  font-size: 50px;
-  margin-bottom: 0rem;
 }
 
 .product p {
@@ -284,10 +324,11 @@ footer {
   padding: 0 1rem 0;
   background-color: $workoholics-black;
   color: white;
+  display: flex;
 }
 
 footer address {
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
 
@@ -354,18 +395,70 @@ form button {
   display: inline-block;
 }
 
-@media only screen and (max-width: 897px) {
+@media only screen and (max-width: 900px) {
   #intro img {
     right: 0vw;
     left: 25vw;
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 600px) {
   #nav-menu-list {
     display: none;
   }
   #menu-collapse-icon {
+    display: block;
+  }
+  #products-intro {
+    max-width: 900px;
+    align-self: flex-end;
+    font-size: 24px;
+  }
+  .product {
+    margin: 12rem auto 12rem;
+  }
+
+  #t-shirt {
+    align-self: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #bottle {
+    align-self: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #t-shirt-img {
+    $rotation: 14deg;
+    -webkit-transform: rotate($rotation) scaleX(-1);
+    transform: rotate($rotation) scaleX(-1);
+    z-index: -1;
+    left: 120px;
+  }
+
+  #bottle-img {
+    $rotation: 32deg;
+    -webkit-transform: rotate($rotation) scaleX(-1);
+    transform: rotate($rotation) scaleX(-1);
+    z-index: -1;
+    left: 160px;
+  }
+
+  #address-mobile-view {
+    display: block;
+  }
+
+  #address-desktop-view {
+    display: none;
+  }
+
+  #footer-right-block {
+    margin-bottom: 0rem;
+  }
+
+  footer {
     display: block;
   }
 }
