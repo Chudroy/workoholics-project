@@ -104,6 +104,8 @@
 /* You can add global styles to this file, and also import other style files */
 $workoholics-black: #212222;
 $workoholics-pink: #fb088c;
+$page-padding-desktop: 0 2rem 0;
+$page-padding-mobile: 0 1rem 0;
 
 #nav-menu-list {
   display: flex;
@@ -166,16 +168,24 @@ $workoholics-pink: #fb088c;
   max-width: 900px;
   align-self: flex-end;
   font-size: 32px;
+  margin-bottom: 5rem;
+  margin-right: 4rem;
 }
 
 #t-shirt {
   align-self: flex-start;
+  height: 565px;
+  width: 100%;
   max-width: 617px;
+  margin: 6rem 0 0;
 }
 
 #bottle {
   align-self: flex-end;
-  max-width: 617px;
+  height: 510px;
+  width: 100%;
+  max-width: 621px;
+  margin: 6rem 0 9rem;
 }
 
 #t-shirt-img {
@@ -183,6 +193,7 @@ $workoholics-pink: #fb088c;
   -webkit-transform: rotate($rotation) scaleX(-1);
   transform: rotate($rotation) scaleX(-1);
   z-index: -1;
+  left: 150px;
 }
 
 #bottle-img {
@@ -190,6 +201,7 @@ $workoholics-pink: #fb088c;
   -webkit-transform: rotate($rotation) scaleX(-1);
   transform: rotate($rotation) scaleX(-1);
   z-index: -1;
+  right: 220px;
 }
 
 #slogan {
@@ -244,25 +256,25 @@ $workoholics-pink: #fb088c;
 }
 
 .product {
-  margin: 3rem 0 3rem;
+  margin: 3rem 3rem 3rem;
 }
 
 .product h2 {
-  font-size: 50px;
+  font-size: 90px;
   margin-bottom: 0rem;
 }
 
 .product img {
   position: absolute;
+  height: 505px;
   width: auto;
-  height: 365px;
 }
 
 .product p {
-  font-size: 14px;
-  width: 200px;
+  font-size: 16px;
+  width: 318px;
   margin-top: 0rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .product a {
@@ -270,6 +282,11 @@ $workoholics-pink: #fb088c;
   color: black;
   display: block;
   margin-bottom: 1rem;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .colour-samples {
@@ -311,7 +328,7 @@ body {
 }
 
 main {
-  padding: 0 1rem 0;
+  padding: $page-padding-desktop;
 }
 
 ul {
@@ -321,7 +338,7 @@ ul {
 }
 
 footer {
-  padding: 0 1rem 0;
+  padding: $page-padding-desktop;
   background-color: $workoholics-black;
   color: white;
   display: flex;
@@ -413,21 +430,48 @@ form button {
     max-width: 900px;
     align-self: flex-end;
     font-size: 24px;
+
+    margin: 0;
   }
   .product {
     margin: 12rem auto 12rem;
+  }
+
+  .product h2 {
+    font-size: 50px;
+    margin-bottom: 0rem;
+  }
+
+  .product img {
+    width: auto;
+    height: 365px;
+  }
+
+  .product p {
+    font-size: 14px;
+    width: 180px;
+  }
+
+  .product-footer {
+    flex-direction: column;
   }
 
   #t-shirt {
     align-self: auto;
     margin-left: 0;
     margin-right: 0;
+    height: auto;
+    margin-bottom: 3rem;
+    margin-top: 8rem;
   }
 
   #bottle {
     align-self: auto;
     margin-left: 0;
     margin-right: 0;
+    height: auto;
+    margin-top: 8rem;
+    margin-bottom: 12rem;
   }
 
   #t-shirt-img {
@@ -458,7 +502,16 @@ form button {
     margin-bottom: 0rem;
   }
 
+  main {
+    padding: $page-padding-mobile;
+  }
+
   footer {
     display: block;
+  }
+
+  footer address {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
   }
 }
