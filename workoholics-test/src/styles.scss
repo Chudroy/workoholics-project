@@ -110,18 +110,11 @@ $page-padding-mobile: 0 1rem 0;
 $max-width: 1450px;
 $min-width: 375px;
 
-#nav-menu-list {
-  display: flex;
-  font-size: 18px;
-  list-style: none;
-  margin: 0px;
-}
-
-#menu-collapse-icon {
+.nav__collapse-icon {
   display: none;
 }
 
-#intro {
+.intro {
   margin-top: 3rem;
   margin-bottom: 7rem;
   display: flex;
@@ -130,29 +123,29 @@ $min-width: 375px;
   align-self: center;
 }
 
-#intro #intro-lorem {
+.intro__lorem {
   align-self: flex-start;
   left: max(100px, 10vw);
 }
 
-#intro #intro-ipsum {
+.intro__ipsum {
   align-self: flex-end;
   right: max(140px, 10vw);
 }
 
-#intro #intro-dolor {
+.intro__dolor {
   align-self: flex-start;
   left: max(100px, 10vw);
 }
 
-#intro p {
+.intro__p {
   position: relative;
   font-size: min(31vw, 217px);
   margin-top: 0rem;
   margin-bottom: 0rem;
 }
 
-#intro img {
+.intro__img {
   position: absolute;
   width: min(85vw, 645px);
   height: auto;
@@ -162,7 +155,7 @@ $min-width: 375px;
   right: 24%;
 }
 
-#contact-flag {
+.contact-flag {
   position: absolute;
   display: flex;
   align-items: center;
@@ -173,13 +166,13 @@ $min-width: 375px;
   right: 0px;
 }
 
-#contact-flag img {
+.contact-flag__img {
   margin-right: 2rem;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-#products {
+.products {
   display: flex;
   flex-direction: column;
   max-width: $max-width;
@@ -187,7 +180,7 @@ $min-width: 375px;
   align-self: center;
 }
 
-#products-intro {
+.products__intro {
   max-width: 900px;
   align-self: flex-end;
   font-size: 32px;
@@ -199,7 +192,7 @@ $min-width: 375px;
   height: 565px;
   width: 100%;
   max-width: 617px;
-  margin: 6rem 0 0;
+  margin: 6rem 0 6rem;
 }
 
 #bottle {
@@ -207,10 +200,10 @@ $min-width: 375px;
   height: 510px;
   width: 100%;
   max-width: 621px;
-  margin: 6rem 0 9rem;
+  margin: 0 0 9rem;
 }
 
-#t-shirt-img {
+.product__t-shirt-img {
   $rotation: 14deg;
   -webkit-transform: rotate($rotation) scaleX(-1);
   transform: rotate($rotation) scaleX(-1);
@@ -218,7 +211,7 @@ $min-width: 375px;
   left: 150px;
 }
 
-#bottle-img {
+.product__bottle-img {
   $rotation: 32deg;
   -webkit-transform: rotate($rotation) scaleX(-1);
   transform: rotate($rotation) scaleX(-1);
@@ -269,15 +262,22 @@ $min-width: 375px;
   margin-bottom: 1rem;
 }
 
-.nav-menu-item {
+.nav__list {
+  display: flex;
+  font-size: 18px;
+  list-style: none;
+  margin: 0px;
+}
+
+.nav__item {
   margin: auto 1rem auto;
 }
 
-.infront-img {
+.img--infront-img {
   z-index: 2;
 }
 
-.behind-img {
+.img--behind-img {
   z-index: 0;
 }
 
@@ -463,16 +463,16 @@ form button {
 }
 
 @media only screen and (max-width: 1800px) {
-  #intro img {
+  .intro__img {
     right: 12%;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  #contact-flag {
+  .contact-flag {
     display: none;
   }
-  #intro img {
+  .intro__img {
     right: 0vw;
     left: 25vw;
   }
@@ -491,13 +491,10 @@ form button {
 }
 
 @media only screen and (max-width: 600px) {
-  #nav-menu-list {
-    display: none;
-  }
-  #menu-collapse-icon {
+  .nav__collapse-icon {
     display: block;
   }
-  #products-intro {
+  .products__intro {
     max-width: 900px;
     align-self: flex-end;
     font-size: 24px;
@@ -511,8 +508,7 @@ form button {
 
   #t-shirt {
     align-self: auto;
-    margin-left: 0;
-    margin-right: 0;
+    margin: auto 0 auto;
     height: auto;
     margin-bottom: 3rem;
     margin-top: 8rem;
@@ -520,14 +516,13 @@ form button {
 
   #bottle {
     align-self: auto;
-    margin-left: 0;
-    margin-right: 0;
+    margin: auto 0 auto;
     height: auto;
     margin-top: 8rem;
     margin-bottom: 12rem;
   }
 
-  #t-shirt-img {
+  .product__t-shirt-img {
     $rotation: 14deg;
     -webkit-transform: rotate($rotation) scaleX(-1);
     transform: rotate($rotation) scaleX(-1);
@@ -535,7 +530,7 @@ form button {
     left: 120px;
   }
 
-  #bottle-img {
+  .product__bottle-img {
     $rotation: 32deg;
     -webkit-transform: rotate($rotation) scaleX(-1);
     transform: rotate($rotation) scaleX(-1);
@@ -556,6 +551,11 @@ form button {
   #footer-right-block {
     margin-bottom: 0rem;
   }
+
+  .nav__list {
+    display: none;
+  }
+
   .product {
     margin: 12rem auto 12rem;
   }

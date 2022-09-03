@@ -9,10 +9,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 // Angular Material Modules
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { IntroductionComponent } from './introduction/introduction.component';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { ContactFlagComponent } from './contact-flag/contact-flag.component';
 
 //Custom Modules
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavigationBarComponent, IntroductionComponent, ProductsListComponent, FooterComponent, HeaderComponent, ContactFlagComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
