@@ -15,10 +15,11 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactFlagComponent } from './contact-flag/contact-flag.component';
+import { ProductComponent } from './product/product.component';
 
 //Custom Modules
 @NgModule({
-  declarations: [AppComponent, NavigationBarComponent, IntroductionComponent, ProductsListComponent, FooterComponent, HeaderComponent, ContactFlagComponent],
+  declarations: [AppComponent, NavigationBarComponent, IntroductionComponent, ProductsListComponent, FooterComponent, HeaderComponent, ContactFlagComponent, ProductComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,114 +1,29 @@
-// // Custom Theming for Angular Material
-// // For more information: https://material.angular.io/guide/theming
-// @use "@angular/material" as mat;
-// // Plus imports for other components in your app.
+@use "./mixins.scss" as mixin;
+@use "./variables.scss" as var;
 
-// // Include the common styles for Angular Material. We include this here so that you only
-// // have to load a single css file for Angular Material in your app.
-// // Be sure that you only ever include this mixin once!
-// @include mat.core();
+body {
+  margin: 0;
+  padding-top: 0.5rem;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
 
-// /* For use in src/lib/core/theming/_palette.scss */
-// $workoholics-grey-palette: (
-//   50: #e4e4e4,
-//   100: #bcbdbd,
-//   200: #909191,
-//   300: #646464,
-//   400: #424343,
-//   500: #212222,
-//   600: #1d1e1e,
-//   700: #181919,
-//   800: #141414,
-//   900: #0b0c0c,
-//   A100: #e76c6c,
-//   A200: #e04040,
-//   A400: #ec0000,
-//   A700: #d30000,
-//   contrast: (
-//     50: #000000,
-//     100: #000000,
-//     200: #000000,
-//     300: #ffffff,
-//     400: #ffffff,
-//     500: #ffffff,
-//     600: #ffffff,
-//     700: #ffffff,
-//     800: #ffffff,
-//     900: #ffffff,
-//     A100: #000000,
-//     A200: #ffffff,
-//     A400: #ffffff,
-//     A700: #ffffff,
-//   ),
-// );
+main {
+  display: flex;
+  flex-direction: column;
+  padding: var.$page-padding-desktop;
+}
 
-// $workoholics-pink-palette: (
-//   50: #ffe1f1,
-//   100: #feb5dd,
-//   200: #fd84c6,
-//   300: #fc52af,
-//   400: #fc2d9d,
-//   500: #fb088c,
-//   600: #fa0784,
-//   700: #fa0679,
-//   800: #f9046f,
-//   900: #f8025c,
-//   A100: #ffffff,
-//   A200: #ffebf1,
-//   A400: #ffb8ce,
-//   A700: #ff9fbc,
-//   contrast: (
-//     50: #000000,
-//     100: #000000,
-//     200: #000000,
-//     300: #000000,
-//     400: #ffffff,
-//     500: #ffffff,
-//     600: #ffffff,
-//     700: #ffffff,
-//     800: #ffffff,
-//     900: #ffffff,
-//     A100: #000000,
-//     A200: #000000,
-//     A400: #000000,
-//     A700: #000000,
-//   ),
-// );
-
-// // Define the palettes for your theme using the Material Design palettes available in palette.scss
-// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// // hue. Available color palettes: https://material.io/design/color/
-// $workoholics-test-primary: mat.define-palette($workoholics-grey-palette);
-// $workoholics-test-accent: mat.define-palette($workoholics-pink-palette);
-
-// // The warn palette is optional (defaults to red).
-// $workoholics-test-warn: mat.define-palette(mat.$red-palette);
-
-// // Create the theme object. A theme consists of configurations for individual
-// // theming systems such as "color" or "typography".
-// $workoholics-test-theme: mat.define-light-theme(
-//   (
-//     color: (
-//       primary: $workoholics-test-primary,
-//       accent: $workoholics-test-accent,
-//       warn: $workoholics-test-warn,
-//     ),
-//   )
-// );
-
-// // Include theme styles for core and each component used in your app.
-// // Alternatively, you can import and @include the theme mixins for each component
-// // that you are using.
-// @include mat.all-component-themes($workoholics-test-theme);
-
-/* You can add global styles to this file, and also import other style files */
-$workoholics-black: #212222;
-$workoholics-pink: #fb088c;
-$page-padding-desktop: 0 6rem 0;
-$page-padding-mobile: 0 1rem 0;
-
-$max-width: 1450px;
-$min-width: 375px;
+nav {
+  $interior-padding: 5vw;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: $interior-padding;
+  padding-right: $interior-padding;
+  display: flex;
+  justify-content: space-between;
+}
 
 .nav__collapse-icon {
   display: none;
@@ -121,6 +36,23 @@ $min-width: 375px;
   flex-direction: column;
   align-items: center;
   align-self: center;
+}
+
+.intro__word {
+  position: relative;
+  font-size: min(31vw, 217px);
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.intro__img {
+  position: absolute;
+  width: min(85vw, 645px);
+  height: auto;
+  z-index: 1;
+  right: 150px;
+  top: 190px;
+  right: 24%;
 }
 
 .intro__lorem {
@@ -138,23 +70,6 @@ $min-width: 375px;
   left: max(100px, 10vw);
 }
 
-.intro__p {
-  position: relative;
-  font-size: min(31vw, 217px);
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-}
-
-.intro__img {
-  position: absolute;
-  width: min(85vw, 645px);
-  height: auto;
-  z-index: 1;
-  right: 150px;
-  top: 190px;
-  right: 24%;
-}
-
 .contact-flag {
   position: absolute;
   display: flex;
@@ -166,16 +81,22 @@ $min-width: 375px;
   right: 0px;
 }
 
+.contact-flag:hover {
+}
+
 .contact-flag__img {
   margin-right: 2rem;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
+.contact-flag__text {
+}
+
 .products {
   display: flex;
   flex-direction: column;
-  max-width: $max-width;
+  max-width: var.$max-width;
   width: 100%;
   align-self: center;
 }
@@ -185,9 +106,12 @@ $min-width: 375px;
   align-self: flex-end;
   font-size: 32px;
   margin-bottom: 5rem;
+  padding: 0;
+  list-style-position: inside;
+  list-style-image: url("./assets/Ellipse.png");
 }
 
-#t-shirt {
+.product--t-shirt {
   align-self: flex-start;
   height: 565px;
   width: 100%;
@@ -195,7 +119,7 @@ $min-width: 375px;
   margin: 6rem 0 6rem;
 }
 
-#bottle {
+.product--bottle {
   align-self: flex-end;
   height: 510px;
   width: 100%;
@@ -219,47 +143,39 @@ $min-width: 375px;
   right: 160px;
 }
 
-#footer-content {
+.footer__content {
   flex-grow: 1;
-  max-width: $max-width;
+  max-width: var.$max-width;
   display: flex;
 }
 
-#slogan {
+.slogan {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-#slogan h3 {
+.slogan__text {
+  font-size: 35px;
   margin: 0 auto 0;
 }
 
-#address-mobile-view {
+.address--mobile-view {
   display: none;
 }
 
-#address-desktop-view {
+.address--desktop-view {
   flex-grow: 1;
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
-#address-desktop-view p {
+.address--desktop-view p {
   font-size: 25px;
 }
 
-#footer-right-block {
+.footer__right-block {
   flex-grow: 1;
   margin-bottom: 3rem;
-}
-
-#terms-and-conditions-check {
-  margin-bottom: 1rem;
-  display: flex;
-}
-
-#terms-and-conditions-text {
-  margin-bottom: 1rem;
 }
 
 .nav__list {
@@ -271,6 +187,12 @@ $min-width: 375px;
 
 .nav__item {
   margin: auto 1rem auto;
+  text-decoration: none;
+  color: var.$workoholics-black;
+}
+
+.nav__item:hover {
+  @include mixin.sample-colour-size-grow(1.3);
 }
 
 .img--infront-img {
@@ -285,11 +207,15 @@ $min-width: 375px;
   width: 100vw;
   max-width: 1260px;
   align-self: center;
-  border-top: 2px solid $workoholics-black;
+  border-top: 2px solid var.$workoholics-black;
 }
 
-.product-divider {
+.divider--product {
   width: 100%;
+}
+
+.divider--flex {
+  flex: 1;
 }
 
 .product {
@@ -297,32 +223,32 @@ $min-width: 375px;
   position: relative;
 }
 
-.product h2 {
+.product__title {
   font-size: 90px;
   margin-bottom: 0rem;
 }
 
-.product img {
+.product__img {
   position: absolute;
   height: 505px;
   width: auto;
 }
 
-.product p {
+.product__text {
   font-size: 16px;
   width: 318px;
   margin-top: 0rem;
   margin-bottom: 4rem;
 }
 
-.product a {
+.product__buy {
   text-decoration: none;
   color: black;
   display: block;
   margin-bottom: 1rem;
 }
 
-.product-footer {
+.product__product-footer {
   display: flex;
   justify-content: space-between;
 }
@@ -334,70 +260,40 @@ $min-width: 375px;
 
 .sample-colour {
   margin-right: 1rem;
-  width: 31px;
-  height: 14px;
+  width: var.$sample-colour-width;
+  height: var.$sample-colour-height;
+
+  background-color: gray;
 }
 
-.black {
-  background-color: $workoholics-black;
+.sample-colour:hover {
+  @include mixin.sample-colour-size-grow(1.5);
 }
 
-.pink {
-  background-color: $workoholics-pink;
+.sample-colour--black {
+  background-color: var.$workoholics-black;
 }
 
-.flex-divider {
-  flex: 1;
-}
-
-nav {
-  $interior-padding: 5vw;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: $interior-padding;
-  padding-right: $interior-padding;
-  display: flex;
-  justify-content: space-between;
-}
-
-body {
-  margin: 0;
-  padding-top: 0.5rem;
-  font-family: "DM Sans", sans-serif;
-  font-size: 24px;
-  overflow-x: hidden;
-  position: relative;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-
-  padding: $page-padding-desktop;
-}
-
-ul {
-  padding: 0;
-  list-style-position: inside;
-  list-style-image: url("./assets/Ellipse.png");
+.sample-colour--pink {
+  background-color: var.$workoholics-pink;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  padding: $page-padding-desktop;
-  background-color: $workoholics-black;
+  padding: var.$page-padding-desktop;
+  background-color: var.$workoholics-black;
   color: white;
 }
 
-footer address {
+.address {
   padding-top: 3.5rem;
   padding-bottom: 5rem;
 }
 
-footer address p {
+.address__text {
   font-style: normal;
-  margin: 0px;
+  margin: 0 0 0.5rem;
   font-size: 18px;
 }
 
@@ -405,7 +301,7 @@ form label {
   font-size: 16px;
 }
 
-form #email {
+.email {
   width: 100%;
   box-sizing: border-box; /* add this */
   -webkit-box-sizing: border-box;
@@ -414,15 +310,32 @@ form #email {
   display: block;
   border-right: 0px;
   border-bottom: 1px solid #ccc;
-  background-color: $workoholics-black;
+  background-color: var.$workoholics-black;
   color: white;
   margin-bottom: 1rem;
 }
 
-form #terms-and-conditions-container {
+.terms-and-conditions {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.terms-and-conditions__link {
+  color: white;
+}
+
+.terms-and-conditions__wrapper {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  display: flex;
+}
+
+.terms-and-conditions__text {
+  font-size: 14px;
+  margin-bottom: 1rem;
 }
 
 form input[type="checkbox"] {
@@ -433,28 +346,17 @@ form input[type="checkbox"] {
   width: 0;
 }
 
-form .custom-checkbox {
+.custom-checkbox {
   display: inline-block;
   height: 13px;
   width: 13px;
   border: 1px solid #eee;
-  background-color: $workoholics-black;
+  background-color: var.$workoholics-black;
   margin-right: 1rem;
 }
 
-form span {
-  font-size: 14px;
-}
-
-form a {
-  color: white;
-}
-
-form button {
-  font-size: 18px;
-  background-color: $workoholics-black; /* Green */
+.btn {
   border: none;
-  color: white;
   padding: 0px;
   text-align: center;
   text-decoration: none;
@@ -462,9 +364,26 @@ form button {
   margin-left: 1rem;
 }
 
+.btn--buy-btn {
+  text-align: left;
+  color: black;
+  display: block;
+  margin-bottom: 1rem;
+  margin-left: 0rem;
+  font-size: 20px;
+  text-align: end;
+}
+
+.btn--form-btn {
+  background-color: var.$workoholics-black;
+  font-size: 18px;
+  color: white;
+  margin-left: 0rem;
+}
+
 @media only screen and (max-width: 1800px) {
   .intro__img {
-    right: 12%;
+    right: 7%;
   }
 }
 
@@ -480,17 +399,16 @@ form button {
   .flex-divider {
     flex-basis: 100%;
   }
-
-  footer {
-    padding: $page-padding-mobile;
-  }
-
-  footer form button {
-    margin-left: 0rem;
-  }
 }
 
 @media only screen and (max-width: 600px) {
+  main {
+    padding: var.$page-padding-mobile;
+  }
+
+  footer {
+    padding: var.$page-padding-mobile;
+  }
   .nav__collapse-icon {
     display: block;
   }
@@ -501,12 +419,7 @@ form button {
     margin: 0;
   }
 
-  #menu-btn {
-    width: 1rem;
-    height: auto;
-  }
-
-  #t-shirt {
+  .product--t-shirt {
     align-self: auto;
     margin: auto 0 auto;
     height: auto;
@@ -514,7 +427,7 @@ form button {
     margin-top: 8rem;
   }
 
-  #bottle {
+  .product--bottle {
     align-self: auto;
     margin: auto 0 auto;
     height: auto;
@@ -538,17 +451,24 @@ form button {
     left: 160px;
   }
 
-  #address-mobile-view {
-    display: block;
-  }
-
-  #address-desktop-view {
-    display: none;
-  }
-  #footer-content {
+  .footer__content {
     flex-direction: column;
   }
-  #footer-right-block {
+
+  .slogan__text {
+    font-size: 26px;
+  }
+
+  .address--mobile-view {
+    display: block;
+    font-size: 18px;
+  }
+
+  .address--desktop-view {
+    display: none;
+  }
+
+  .footer__right-block {
     margin-bottom: 0rem;
   }
 
@@ -560,43 +480,38 @@ form button {
     margin: 12rem auto 12rem;
   }
 
-  .product h2 {
+  .product__title {
     font-size: 50px;
     margin-bottom: 0rem;
   }
 
-  .product img {
+  .product__img {
     width: auto;
     height: 365px;
   }
 
-  .product p {
+  .product__text {
     font-size: 14px;
     width: 180px;
   }
 
-  .product-footer {
+  .product__footer {
     flex-direction: column;
-  }
-
-  main {
-    padding: $page-padding-mobile;
   }
 
   footer {
     display: block;
   }
 
-  footer form button {
+  .btn {
     display: block;
   }
 
-  footer address {
+  .address {
     padding-top: 3.5rem;
     padding-bottom: 2rem;
   }
-
-  form button {
-    margin-left: 0;
+  .btn--buy-btn {
+    text-align: start;
   }
 }
