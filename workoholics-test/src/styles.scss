@@ -132,12 +132,12 @@ $min-width: 375px;
 
 #intro #intro-lorem {
   align-self: flex-start;
-  left: max(75px, 10vw);
+  left: max(100px, 10vw);
 }
 
 #intro #intro-ipsum {
   align-self: flex-end;
-  right: max(115px, 22vw);
+  right: max(140px, 10vw);
 }
 
 #intro #intro-dolor {
@@ -160,6 +160,23 @@ $min-width: 375px;
   right: 150px;
   top: 190px;
   right: 24%;
+}
+
+#contact-flag {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 770px;
+  right: 0px;
+}
+
+#contact-flag img {
+  margin-right: 2rem;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 #products {
@@ -209,6 +226,12 @@ $min-width: 375px;
   right: 160px;
 }
 
+#footer-content {
+  flex-grow: 1;
+  max-width: $max-width;
+  display: flex;
+}
+
 #slogan {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -235,6 +258,11 @@ $min-width: 375px;
 #footer-right-block {
   flex-grow: 1;
   margin-bottom: 3rem;
+}
+
+#terms-and-conditions-check {
+  margin-bottom: 1rem;
+  display: flex;
 }
 
 #terms-and-conditions-text {
@@ -355,10 +383,11 @@ ul {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
   padding: $page-padding-desktop;
   background-color: $workoholics-black;
   color: white;
-  display: flex;
 }
 
 footer address {
@@ -440,6 +469,9 @@ form button {
 }
 
 @media only screen and (max-width: 900px) {
+  #contact-flag {
+    display: none;
+  }
   #intro img {
     right: 0vw;
     left: 25vw;
@@ -449,8 +481,12 @@ form button {
     flex-basis: 100%;
   }
 
-  #terms-and-conditions-check {
-    margin-bottom: 1rem;
+  footer {
+    padding: $page-padding-mobile;
+  }
+
+  footer form button {
+    margin-left: 0rem;
   }
 }
 
@@ -466,28 +502,6 @@ form button {
     align-self: flex-end;
     font-size: 24px;
     margin: 0;
-  }
-  .product {
-    margin: 12rem auto 12rem;
-  }
-
-  .product h2 {
-    font-size: 50px;
-    margin-bottom: 0rem;
-  }
-
-  .product img {
-    width: auto;
-    height: 365px;
-  }
-
-  .product p {
-    font-size: 14px;
-    width: 180px;
-  }
-
-  .product-footer {
-    flex-direction: column;
   }
 
   #menu-btn {
@@ -536,9 +550,33 @@ form button {
   #address-desktop-view {
     display: none;
   }
-
+  #footer-content {
+    flex-direction: column;
+  }
   #footer-right-block {
     margin-bottom: 0rem;
+  }
+  .product {
+    margin: 12rem auto 12rem;
+  }
+
+  .product h2 {
+    font-size: 50px;
+    margin-bottom: 0rem;
+  }
+
+  .product img {
+    width: auto;
+    height: 365px;
+  }
+
+  .product p {
+    font-size: 14px;
+    width: 180px;
+  }
+
+  .product-footer {
+    flex-direction: column;
   }
 
   main {
@@ -546,7 +584,6 @@ form button {
   }
 
   footer {
-    padding: $page-padding-mobile;
     display: block;
   }
 
