@@ -328,6 +328,7 @@ form label {
 }
 
 .email {
+  font-size: 20px;
   width: 100%;
   box-sizing: border-box; /* add this */
   -webkit-box-sizing: border-box;
@@ -341,6 +342,10 @@ form label {
   margin-bottom: 1rem;
 }
 
+.email:focus {
+  outline: none;
+}
+
 .terms-and-conditions {
   display: flex;
   justify-content: space-between;
@@ -351,6 +356,10 @@ form label {
 
 .terms-and-conditions__link {
   color: white;
+}
+
+.terms-and-conditions__link:hover {
+  color: var.$workoholics-pink;
 }
 
 .terms-and-conditions__wrapper {
