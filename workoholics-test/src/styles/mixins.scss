@@ -1,0 +1,43 @@
+@use "animations.scss" as anim;
+
+@mixin sample-colour-size-grow($factor) {
+  transition: all 0.2s ease-in-out;
+  transform: scale($factor);
+  -webkit-transform: scale($factor);
+}
+
+//animations
+
+//fading animations
+
+@mixin fade-in-animation($delay) {
+  animation: fadeInAnimation ease 3s $delay;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@mixin move-in-from-right() {
+  animation-name: moveInFromRight;
+  animation-duration: 1.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: Cubic-Bezier(0.05, 0.8, 0.1, 0.95);
+  animation-fill-mode: forwards;
+}
+
+//transform animations
+
+@mixin spin-once($delay) {
+  animation: spinOnce 0.75s ease-in-out $delay 1 forwards;
+}
+
+@mixin spin-clockwise($degree) {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+@mixin reset-spin() {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
