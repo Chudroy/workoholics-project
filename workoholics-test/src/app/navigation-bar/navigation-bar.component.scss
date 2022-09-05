@@ -1,0 +1,43 @@
+@use "../../styles/variables.scss" as var;
+@use "../../styles/mixins.scss" as mixin;
+
+nav {
+  $interior-padding: 5vw;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: $interior-padding;
+  padding-right: $interior-padding;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__collapse-icon {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  font-size: 18px;
+  list-style: none;
+  margin: 0px;
+}
+
+.nav__item {
+  margin: auto 1rem auto;
+  text-decoration: none;
+  color: var.$workoholics-black;
+}
+
+.nav__item:hover {
+  @include mixin.sample-colour-size-grow(1.3);
+}
+
+@media only screen and (max-width: 600px) {
+  .nav__collapse-icon {
+    display: block;
+  }
+
+  .nav__list {
+    display: none;
+  }
+}

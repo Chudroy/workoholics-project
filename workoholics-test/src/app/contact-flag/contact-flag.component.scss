@@ -1,0 +1,24 @@
+@use "../../styles/variables.scss" as var;
+@use "../../styles/mixins.scss" as mixin;
+
+.contact-flag:hover {
+  .contact-flag__img {
+    @include mixin.spin-once(0s);
+  }
+}
+
+.contact-flag__img {
+  margin-right: 2rem;
+  transform: rotate(90deg);
+}
+
+.contact-flag__button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: var.$workoholics-black;
+}

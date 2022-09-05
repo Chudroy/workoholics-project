@@ -1,0 +1,143 @@
+@use "../../styles/variables.scss" as var;
+@use "../../styles/mixins.scss" as mixin;
+
+.products__intro {
+  max-width: 900px;
+  align-self: flex-end;
+  font-size: 32px;
+  margin-bottom: 5rem;
+  padding: 0;
+  list-style-position: inside;
+  list-style-image: url("../../assets/Ellipse.png");
+}
+
+.product--t-shirt {
+  align-self: flex-start;
+  height: 565px;
+  width: 100%;
+  max-width: 617px;
+  margin: 6rem 0 6rem;
+}
+
+.product--bottle {
+  align-self: flex-end;
+  height: 510px;
+  width: 100%;
+  max-width: 621px;
+  margin: 0 0 9rem;
+}
+
+.product__t-shirt-img {
+  $rotation: 14deg;
+  -webkit-transform: rotate($rotation) scaleX(-1);
+  transform: rotate($rotation) scaleX(-1);
+  z-index: -1;
+  left: 150px;
+}
+
+.product__bottle-img {
+  $rotation: 32deg;
+  -webkit-transform: rotate($rotation) scaleX(-1);
+  transform: rotate($rotation) scaleX(-1);
+  z-index: -1;
+  right: 160px;
+}
+
+.product {
+  margin: 3rem 3rem 3rem;
+  position: relative;
+}
+
+.product__title {
+  font-size: 90px;
+  margin-bottom: 0rem;
+}
+
+.product__img {
+  position: absolute;
+  height: 505px;
+  width: auto;
+}
+
+.product__text {
+  font-size: 16px;
+  width: 318px;
+  margin-top: 0rem;
+  margin-bottom: 4rem;
+}
+
+.product__buy {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.product__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  .products__intro {
+    max-width: 900px;
+    align-self: flex-end;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .product {
+    margin: 6rem auto 6rem;
+  }
+
+  .product__title {
+    font-size: 50px;
+    margin-bottom: 0rem;
+  }
+
+  .product__img {
+    width: auto;
+    height: 365px;
+  }
+
+  .product__text {
+    font-size: 14px;
+    width: 180px;
+  }
+
+  .product__footer {
+    flex-direction: column;
+  }
+
+  .product--t-shirt {
+    align-self: auto;
+
+    height: auto;
+    margin-bottom: 3rem;
+    margin-top: 8rem;
+  }
+
+  .product--bottle {
+    align-self: auto;
+    margin: auto 0 auto;
+    height: auto;
+    margin-top: 8rem;
+    margin-bottom: 12rem;
+  }
+
+  .product__t-shirt-img {
+    $rotation: 14deg;
+    -webkit-transform: rotate($rotation) scaleX(-1);
+    transform: rotate($rotation) scaleX(-1);
+    z-index: -1;
+    left: 120px;
+  }
+
+  .product__bottle-img {
+    $rotation: 32deg;
+    -webkit-transform: rotate($rotation) scaleX(-1);
+    transform: rotate($rotation) scaleX(-1);
+    z-index: -1;
+    left: 160px;
+  }
+}

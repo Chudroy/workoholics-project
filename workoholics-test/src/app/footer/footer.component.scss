@@ -1,0 +1,136 @@
+@use "../../styles/variables.scss" as var;
+@use "../../styles/mixins.scss" as mixin;
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: var.$page-padding-desktop;
+  background-color: var.$workoholics-black;
+  color: white;
+}
+
+.footer__content {
+  flex-grow: 1;
+  max-width: var.$max-width;
+  display: flex;
+}
+
+.footer__right-block {
+  flex-grow: 1;
+  margin-bottom: 3rem;
+}
+
+.slogan {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.slogan__text {
+  font-size: 35px;
+  margin: 0 auto 0;
+}
+
+.email {
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box; /* add this */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-bottom: 20px;
+  display: block;
+  border-right: 0px;
+  border-bottom: 1px solid #ccc;
+  background-color: var.$workoholics-black;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.email:focus {
+  outline: none;
+}
+
+.terms-and-conditions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.terms-and-conditions__link {
+  color: white;
+}
+
+.terms-and-conditions__link:hover {
+  color: var.$workoholics-pink;
+}
+
+.terms-and-conditions__wrapper {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.terms-and-conditions__text {
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+.address {
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.address__text {
+  font-style: normal;
+  margin: 0 0 0.5rem;
+  font-size: 18px;
+}
+
+.address--mobile-view {
+  display: none;
+}
+
+.address--desktop-view {
+  flex-grow: 1;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.address--desktop-view p {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    padding: var.$page-padding-mobile;
+    display: block;
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
+
+  .footer__right-block {
+    margin-bottom: 0rem;
+  }
+
+  .slogan__text {
+    font-size: 26px;
+  }
+
+  .address--mobile-view {
+    display: block;
+    font-size: 18px;
+  }
+
+  .address--desktop-view {
+    display: none;
+  }
+
+  .address {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+  }
+}

@@ -18,21 +18,7 @@ main {
   padding: var.$page-padding-desktop;
 }
 
-nav {
-  $interior-padding: 5vw;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: $interior-padding;
-  padding-right: $interior-padding;
-  display: flex;
-  justify-content: space-between;
-}
-
-.nav__collapse-icon {
-  display: none;
-}
-
-.intro {
+app-introduction {
   margin-top: 3rem;
   margin-bottom: 7rem;
   display: flex;
@@ -41,52 +27,7 @@ nav {
   align-self: center;
 }
 
-.intro__word {
-  position: relative;
-  font-size: min(31vw, 217px);
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-}
-
-.intro__img {
-  position: absolute;
-  width: min(85vw, 645px);
-  height: auto;
-  z-index: 1;
-  right: 150px;
-  top: 190px;
-  right: 24%;
-
-  // opacity: 0;
-  // @include mixin.fade-in-animation(1.4s);
-  @include mixin.move-in-from-right();
-}
-
-.intro__lorem {
-  align-self: flex-start;
-  left: max(100px, 10vw);
-
-  opacity: 0;
-  @include mixin.fade-in-animation(1s);
-}
-
-.intro__ipsum {
-  align-self: flex-end;
-  right: max(140px, 10vw);
-
-  opacity: 0;
-  @include mixin.fade-in-animation(1.1s);
-}
-
-.intro__dolor {
-  align-self: flex-start;
-  left: max(100px, 10vw);
-
-  opacity: 0;
-  @include mixin.fade-in-animation(1.2s);
-}
-
-.contact-flag {
+app-contact-flag {
   position: absolute;
   display: flex;
   align-items: center;
@@ -97,128 +38,12 @@ nav {
   right: 0px;
 }
 
-.contact-flag:hover {
-  .contact-flag__img {
-    @include mixin.spin-once(0s);
-  }
-}
-
-.contact-flag__img {
-  margin-right: 2rem;
-  transform: rotate(90deg);
-}
-
-.contact-flag__button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  color: var.$workoholics-black;
-}
-
-.products {
+app-products-list {
   display: flex;
   flex-direction: column;
   max-width: var.$max-width;
   width: 100%;
   align-self: center;
-}
-
-.products__intro {
-  max-width: 900px;
-  align-self: flex-end;
-  font-size: 32px;
-  margin-bottom: 5rem;
-  padding: 0;
-  list-style-position: inside;
-  list-style-image: url("../assets/Ellipse.png");
-}
-
-.product--t-shirt {
-  align-self: flex-start;
-  height: 565px;
-  width: 100%;
-  max-width: 617px;
-  margin: 6rem 0 6rem;
-}
-
-.product--bottle {
-  align-self: flex-end;
-  height: 510px;
-  width: 100%;
-  max-width: 621px;
-  margin: 0 0 9rem;
-}
-
-.product__t-shirt-img {
-  $rotation: 14deg;
-  -webkit-transform: rotate($rotation) scaleX(-1);
-  transform: rotate($rotation) scaleX(-1);
-  z-index: -1;
-  left: 150px;
-}
-
-.product__bottle-img {
-  $rotation: 32deg;
-  -webkit-transform: rotate($rotation) scaleX(-1);
-  transform: rotate($rotation) scaleX(-1);
-  z-index: -1;
-  right: 160px;
-}
-
-.footer__content {
-  flex-grow: 1;
-  max-width: var.$max-width;
-  display: flex;
-}
-
-.slogan {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.slogan__text {
-  font-size: 35px;
-  margin: 0 auto 0;
-}
-
-.address--mobile-view {
-  display: none;
-}
-
-.address--desktop-view {
-  flex-grow: 1;
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-.address--desktop-view p {
-  font-size: 25px;
-}
-
-.footer__right-block {
-  flex-grow: 1;
-  margin-bottom: 3rem;
-}
-
-.nav__list {
-  display: flex;
-  font-size: 18px;
-  list-style: none;
-  margin: 0px;
-}
-
-.nav__item {
-  margin: auto 1rem auto;
-  text-decoration: none;
-  color: var.$workoholics-black;
-}
-
-.nav__item:hover {
-  @include mixin.sample-colour-size-grow(1.3);
 }
 
 .img--infront-img {
@@ -242,41 +67,6 @@ nav {
 
 .divider--flex {
   flex: 1;
-}
-
-.product {
-  margin: 3rem 3rem 3rem;
-  position: relative;
-}
-
-.product__title {
-  font-size: 90px;
-  margin-bottom: 0rem;
-}
-
-.product__img {
-  position: absolute;
-  height: 505px;
-  width: auto;
-}
-
-.product__text {
-  font-size: 16px;
-  width: 318px;
-  margin-top: 0rem;
-  margin-bottom: 4rem;
-}
-
-.product__buy {
-  text-decoration: none;
-  color: black;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.product__footer {
-  display: flex;
-  justify-content: space-between;
 }
 
 .colour-samples {
@@ -304,74 +94,8 @@ nav {
   background-color: var.$workoholics-pink;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  padding: var.$page-padding-desktop;
-  background-color: var.$workoholics-black;
-  color: white;
-}
-
-.address {
-  padding-top: 3.5rem;
-  padding-bottom: 5rem;
-}
-
-.address__text {
-  font-style: normal;
-  margin: 0 0 0.5rem;
-  font-size: 18px;
-}
-
 form label {
   font-size: 16px;
-}
-
-.email {
-  font-size: 20px;
-  width: 100%;
-  box-sizing: border-box; /* add this */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding-bottom: 20px;
-  display: block;
-  border-right: 0px;
-  border-bottom: 1px solid #ccc;
-  background-color: var.$workoholics-black;
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.email:focus {
-  outline: none;
-}
-
-.terms-and-conditions {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-  align-items: baseline;
-}
-
-.terms-and-conditions__link {
-  color: white;
-}
-
-.terms-and-conditions__link:hover {
-  color: var.$workoholics-pink;
-}
-
-.terms-and-conditions__wrapper {
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  display: flex;
-  align-items: baseline;
-}
-
-.terms-and-conditions__text {
-  font-size: 14px;
-  margin-bottom: 1rem;
 }
 
 .checkbox__wrapper {
@@ -464,19 +188,9 @@ form label {
   color: var.$workoholics-pink;
 }
 
-@media only screen and (max-width: 1800px) {
-  .intro__img {
-    right: 7%;
-  }
-}
-
 @media only screen and (max-width: 900px) {
-  .contact-flag {
+  app-contact-flag {
     display: none;
-  }
-  .intro__img {
-    right: 0vw;
-    left: 25vw;
   }
 
   .flex-divider {
@@ -489,110 +203,8 @@ form label {
     padding: var.$page-padding-mobile;
   }
 
-  footer {
-    padding: var.$page-padding-mobile;
-  }
-  .nav__collapse-icon {
-    display: block;
-  }
-  .products__intro {
-    max-width: 900px;
-    align-self: flex-end;
-    font-size: 24px;
-    margin: 0;
-  }
-
-  .product--t-shirt {
-    align-self: auto;
-
-    height: auto;
-    margin-bottom: 3rem;
-    margin-top: 8rem;
-  }
-
-  .product--bottle {
-    align-self: auto;
-    margin: auto 0 auto;
-    height: auto;
-    margin-top: 8rem;
-    margin-bottom: 12rem;
-  }
-
-  .product__t-shirt-img {
-    $rotation: 14deg;
-    -webkit-transform: rotate($rotation) scaleX(-1);
-    transform: rotate($rotation) scaleX(-1);
-    z-index: -1;
-    left: 120px;
-  }
-
-  .product__bottle-img {
-    $rotation: 32deg;
-    -webkit-transform: rotate($rotation) scaleX(-1);
-    transform: rotate($rotation) scaleX(-1);
-    z-index: -1;
-    left: 160px;
-  }
-
-  .footer__content {
-    flex-direction: column;
-  }
-
-  .slogan__text {
-    font-size: 26px;
-  }
-
-  .address--mobile-view {
-    display: block;
-    font-size: 18px;
-  }
-
-  .address--desktop-view {
-    display: none;
-  }
-
-  .footer__right-block {
-    margin-bottom: 0rem;
-  }
-
-  .nav__list {
-    display: none;
-  }
-
-  .product {
-    margin: 6rem auto 6rem;
-  }
-
-  .product__title {
-    font-size: 50px;
-    margin-bottom: 0rem;
-  }
-
-  .product__img {
-    width: auto;
-    height: 365px;
-  }
-
-  .product__text {
-    font-size: 14px;
-    width: 180px;
-  }
-
-  .product__footer {
-    flex-direction: column;
-  }
-
-  footer {
-    display: block;
-  }
-
   .btn {
     display: block;
-  }
-
-  .address {
-    padding-top: 3.5rem;
-    padding-bottom: 2rem;
   }
   .btn--buy-btn {
     text-align: start;
