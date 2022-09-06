@@ -1,6 +1,6 @@
 # workoholics-project
 
-Para abrir el proyecto, clonéalo en una carpeta local, ejecuta `npm init`, y cuando acabe ejecuta `ng serve -o`
+Para abrir el proyecto, clonéalo en una carpeta local, cambia al directorio `workoholics-test` y ejecuta `npm init`. Cuando acabe ejecuta `ng serve -o`
 
 El proyecto se abrirá en http://localhost:4200/
 
